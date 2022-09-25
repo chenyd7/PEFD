@@ -1,5 +1,5 @@
 # Improved Feature Distillation via Projector Ensemble 
-This repository contains the code for Projector Ensemble Feature Distillation (PED) accepted at NeurIPS'22.
+This repository contains the code for Projector Ensemble Feature Distillation (PEFD) accepted at NeurIPS'22.
 
 Part of the code is modified from [CRD](https://github.com/HobbitLong/RepDistiller).
 
