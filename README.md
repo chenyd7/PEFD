@@ -17,3 +17,12 @@ sh scripts/run_cifar.sh
 
 ## Run on ImageNet
 sh scripts/run_imagenet.sh
+
+## Bibtex
+@inproceedings{
+chen2022improved,
+title={Improved Feature Distillation via Projector Ensemble},
+author={Yudong Chen and Sen Wang and Jiajun Liu and Xuwei Xu and Frank de Hoog and Zi Huang},
+booktitle={Thirty-Sixth Conference on Neural Information Processing Systems},
+year={2022}
+}
