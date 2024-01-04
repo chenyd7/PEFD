@@ -110,7 +110,7 @@ def train_distill(epoch, train_loader, module_list, criterion_list, optimizer, o
 
         # other kd beyond KL divergence
         if opt.distill == 'kd':
-            loss_kd = 0       
+            loss_kd = criterion_div(logit_s, logit_t)          
         elif opt.distill == 'kd1proj':   
             # linear Regress             
             logit_s1 = module_list[1](logit_s)
