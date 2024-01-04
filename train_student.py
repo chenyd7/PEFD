@@ -64,7 +64,7 @@ def parse_option():
     parser.add_argument('--path_t', type=str, default=None, help='teacher model snapshot')
 
     # distillation
-    parser.add_argument('--distill', type=str, default='kd', choices=['kd', 'ours'])
+    parser.add_argument('--distill', type=str, default='kd', choices=['kd', 'kd1proj', 'ours'])
     parser.add_argument('--trial', type=str, default='1', help='trial id')
 
     parser.add_argument('-r', '--gamma', type=float, default=1, help='weight for classification')
@@ -212,6 +212,13 @@ def main():
     criterion_div = DistillKL(opt.kd_T)
     if opt.distill == 'kd':
         criterion_kd = DistillKL(opt.kd_T)
+        regress_s = Reg(n_cls, n_cls) 
+        module_list.append(regress_s)
+    elif opt.distill == 'kd1proj':
+        criterion_kd = DistillKL(opt.kd_T)
+        regress_s = Reg(n_cls, n_cls) 
+        module_list.append(regress_s)
+        trainable_list.append(regress_s)
     elif opt.distill == 'ours':        
         criterion_kd = nn.CrossEntropyLoss()     
         # Linear Regress
