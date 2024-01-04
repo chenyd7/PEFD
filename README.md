@@ -1,6 +1,8 @@
 # Improved Feature Distillation via Projector Ensemble 
 This repository contains the code of Projector Ensemble Feature Distillation (PEFD) accepted at NeurIPS'22.
 
+And also the code of Logit Distillation with Projector (Under Review).
+
 Part of the code is modified from [CRD](https://github.com/HobbitLong/RepDistiller).
 
 ## Environment
@@ -25,4 +27,13 @@ title={Improved Feature Distillation via Projector Ensemble},
 author={Yudong Chen and Sen Wang and Jiajun Liu and Xuwei Xu and Frank de Hoog and Zi Huang},  
 booktitle={Thirty-Sixth Conference on Neural Information Processing Systems},  
 year={2022}  
+}
+
+
+@article{  
+chen2023understanding,  
+title={Understanding the Effects of Projectors in Knowledge Distillation},  
+author={Yudong Chen and Sen Wang and Jiajun Liu and Xuwei Xu and Frank de Hoog and Brano Kusy and Zi Huang},  
+journal={arXiv preprint arXiv:2310.17183},  
+year={2023}  
 }
